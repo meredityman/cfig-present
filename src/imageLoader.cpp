@@ -149,7 +149,7 @@ void ImageLoader::drawList(){
 void ImageLoader::drawFileList(const std::vector<Job>& jobs){
 
     float lh = font_normal_bold.getLineHeight();
-    glm::vec2 offset{ 20, font_normal_bold.getLineHeight()};
+    glm::vec2 offset{ 50, font_normal_bold.getLineHeight()};
 
     font_normal_bold.drawString( "RESULTS:", offset.x, offset.y); offset.y += 1.5 * lh;
     for ( auto j = jobs.begin(); j != jobs.end(); j++){
@@ -197,7 +197,7 @@ void ImageLoader::drawDetails(){
     auto location = Location::locations[ofToInt(location_key)-1];
 
     float lh = font_normal_bold.getLineHeight();
-    glm::vec2 offset{ 10, font_normal_bold.getLineHeight()};
+    glm::vec2 offset{ 30, font_normal_bold.getLineHeight()};
 
     ostringstream ss;
 
@@ -208,9 +208,9 @@ void ImageLoader::drawDetails(){
     ss << "Group: " << this->job.gid << " [" << location.coords << "]";
     font_small_regular.drawString( ss.str(), offset.x, offset.y); offset.y += 1.5 * lh;
     
-    std::string scenario = location.scenario;
-    ofStringReplace(scenario, "<br>", "\n");
-    scenario = "Some text.";
-    font_normal_regular.drawString(scenario, offset.x, offset.y); offset.y += 1.5 * lh;
+    // std::string scenario = location.scenario;
+    // ofStringReplace(scenario, "<br>", "\n");
+    // scenario = "Some text.";
+    // font_normal_regular.drawString(scenario, offset.x, offset.y); offset.y += 1.5 * lh;
 
 }

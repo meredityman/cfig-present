@@ -28,6 +28,8 @@ void ofApp::mousePressed(ofMouseEventArgs& mouse){
         loader->change("out");
     } else if(mouse.button == OF_MOUSE_BUTTON_RIGHT) {
         loader->change("in_image");
+    } else if(mouse.button == OF_MOUSE_BUTTON_MIDDLE) {
+        iterateJob(1);
     } else if(mouse.button == OF_MOUSE_BUTTON_4) {
         iterateLocation(-1);
     } else if(mouse.button == OF_MOUSE_BUTTON_5) {
@@ -35,10 +37,10 @@ void ofApp::mousePressed(ofMouseEventArgs& mouse){
     }
 }
 void ofApp::mouseScrolled(ofMouseEventArgs& mouse){
-    if(mouse.scrollY > 0){
+    if(mouse.scrollY > 0.0){
         iterateJob(-1);
     } 
-    else if(mouse.scrollY < 0) {
+    else if(mouse.scrollY < 0.0) {
         iterateJob(1);
     } 
     // if(mouse.scrollX > 0){

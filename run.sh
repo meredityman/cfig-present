@@ -1,9 +1,10 @@
 #!/bin/bash
 
-#make -j8
+make -j8
 
 #src_dir="/media/meredityman/data-ssd/data/work/production/cfig/Code/cfig-outputs/docs_3"
-src_dir="/home/ana/cfig-outputs/docs_3"
+# src_dir="/home/ana/cfig-outputs/docs_3"
+src_dir=$1
 
 # Symbolic link path
 link_path="$PWD"/bin/data/current-jobs
