@@ -1,0 +1,1 @@
+https://cfig.cyfta.com/?admin&uid=foobarfoobar1234#/admin
